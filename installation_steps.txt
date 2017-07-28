@@ -165,4 +165,16 @@ class Product(models.Model):
 python manage.py makemigrations
 python manage.py migrate
 
+E. Importing File in Python
 
+#1 Import from another directory
+
+. means , we jump to upper directory from this current file
+so .. means , we double jump to upper directory from this current file
+import Logging means we will use file Logging.py
+log_yo means alias of our Library, so we could use it when we want to trigger a function using this library
+example : from .. import Logging as log_yo
+
+#2 Import from same directory
+
+from . import Laboratorium as test
