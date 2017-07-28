@@ -1,1 +1,25 @@
 [2017-07-28 07:01:14] Derta Isyajora
+[2017-07-28 07:21:43] Derta Isyajora
+[2017-07-28 07:21:55] Derta Isyajora
+[2017-07-28 07:25:06] Request from MiddlewareHalooo
+[2017-07-28 07:25:06] Request from Middlewareresponse 
+[2017-07-28 07:25:41] Request from MiddlewareHalooo
+[2017-07-28 07:26:05] Request from MiddlewareHalooo
+[2017-07-28 07:33:13] Request from Middlewarederta
+[2017-07-28 07:33:30] Request from Middlewarederta
+[2017-07-28 07:35:11] Request from Middleware/product/
+[2017-07-28 07:35:35] Request from Middleware/product/
+[2017-07-28 07:36:31] Request from Middleware : Source /product/
+[2017-07-28 07:40:07] Request from Middleware : Source POST
+[2017-07-28 07:42:21] Request from Middleware : Source POST
+[2017-07-28 07:42:30] Request from Middleware : Source datasasasa
+[2017-07-28 07:44:41] Request from Middleware : Source /product/
+[2017-07-28 07:45:38]POSTRequest from Middleware : Source /product/
+[2017-07-28 07:54:11]POSTRequest from Middleware : Source /product/
+[2017-07-28 07:54:49]POST Log from Middleware : Source /product/Data Received :{"name":"derta","id":"10"}
+[2017-07-28 07:56:04] Log from Middleware_Method : POST_URL Source : /product/_Data Received :{"name":"derta","id":"10"}
+[2017-07-28 07:56:27] Log from Middleware[Method : POST] [URL Source : /product/] [Data Received :{"name":"derta","id":"10"}]
+[2017-07-28 07:57:42] Log from Middleware[Method : POST] [URL Source : /product/] [Data Received :{"name":"derta","id":"10"}]
+[2017-07-28 07:58:18] Log from Middleware[Method : POST] [URL Source : /product/] [Data Received :{"name":"derta","id":"10"}]
+[2017-07-28 07:58:20] Log from Middleware[Method : POST] [URL Source : /product/] [Data Received :{"name":"derta","id":"10"}]
+[2017-07-28 07:59:02] Log from Middleware[Method : POST] [URL Source : /product/] [Data Received :{"name":"derta","id":"10"}]
