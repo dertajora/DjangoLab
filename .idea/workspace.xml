@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4ff395-35f2-469d-8dc4-a29b4fca9614" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/log/2017-07-28/06-00-00.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/log/2017-07-28/07-00-00.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api_lab/core/Logging.py" afterPath="$PROJECT_DIR$/api_lab/core/Logging.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api_lab/log/2017-07-28/07-00-00.log" afterPath="$PROJECT_DIR$/api_lab/log/2017-07-28/07-00-00.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_api/settings.py" afterPath="$PROJECT_DIR$/django_api/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/installation_steps.txt" afterPath="$PROJECT_DIR$/installation_steps.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,21 +29,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="installation_steps.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="installation_steps.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/installation_steps.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="71" column="18" lean-forward="false" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+            <state relative-caret-position="604">
+              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -57,8 +52,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_api/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            <state relative-caret-position="884">
+              <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -67,8 +62,8 @@
       <file leaf-file-name="middleware.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api_lab/middleware.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -174,7 +169,6 @@
         <option value="$PROJECT_DIR$/mysite/wsgi.py" />
         <option value="$PROJECT_DIR$/django_api/__init__.py" />
         <option value="$PROJECT_DIR$/django_api/urls.py" />
-        <option value="$PROJECT_DIR$/installation_steps.txt" />
         <option value="$PROJECT_DIR$/api_lab/urls.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/django_api/settings.py" />
@@ -183,6 +177,7 @@
         <option value="$PROJECT_DIR$/api_lab/log/2017-07-28/07-00-00.log" />
         <option value="$PROJECT_DIR$/api_lab/middleware.py" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/installation_steps.txt" />
       </list>
     </option>
   </component>
@@ -220,25 +215,6 @@
               <item name="DjangoLab" type="b2602c69:ProjectViewProjectNode" />
               <item name="DjangoLab" type="462c0819:PsiDirectoryNode" />
               <item name="api_lab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DjangoLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DjangoLab" type="462c0819:PsiDirectoryNode" />
-              <item name="api_lab" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DjangoLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DjangoLab" type="462c0819:PsiDirectoryNode" />
-              <item name="api_lab" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DjangoLab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DjangoLab" type="462c0819:PsiDirectoryNode" />
-              <item name="api_lab" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-              <item name="2017-07-28" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DjangoLab" type="b2602c69:ProjectViewProjectNode" />
@@ -474,32 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/installation_steps.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="71" column="18" lean-forward="false" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api_lab/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -538,26 +488,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_api/settings.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api_lab/middleware.py">
+    <entry file="file://$PROJECT_DIR$/django_api/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#640#672#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api_lab/middleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_api/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/installation_steps.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding />
         </state>
       </provider>

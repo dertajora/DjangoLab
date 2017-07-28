@@ -1,4 +1,5 @@
-This is Django installation steps from scratch
+A. This is Django installation steps from scratch
+credit : https://github.com/kalebyosua
 
 #1 Create environment coding
 python -m venv labderta
@@ -20,7 +21,7 @@ pip install pymysql
 
 #6 Reuse Dependensi Library
 pip install -r /path/to/requirements.txt
-Sebenarnya kita bisa simpan dependensi yang ktia install di requirement.txt, jadi nanti pas install tinggal based on file tersebut.
+Actually we could save all the dependencies / libraries used by our project in requirement.txt, so we only need to install based on that file.
 
 #7 Insert config in __init__.py
 import pymysql
@@ -30,9 +31,9 @@ pymysql.install_as_MySQLdb()
 python manage.py runserver
 
 #9 create db django_testing
-create manual database di Database yang di connect in
+create manual database in our MySQL server
 
-#10 Create table bawaan django
+#10 Create table default from django
 python manage.py migrate
 
 #11 Test your django installation.
@@ -42,7 +43,8 @@ Open http://127.0.0.1:8000/ in browser
 python manage.py createsuperuser. Then insert your credential details as requested in command prompt
 
 
-Next Phase -- Create Your First API and Print Hello World!!
+B. Next Phase : Create Your First API and Print Hello World!!
+
 #1 Create app
 python manage.py startapp api_lab (api_lab -> name of applications)
 
@@ -85,5 +87,40 @@ urlpatterns = [
 
 #9 Try to open http://127.0.0.1:8000/home/ in your browser
 
-#10 NB
+#10 Note
 views works like controller in PHP MVC framework
+
+C. Create Middleware
+
+#1 Add file middleware.py at folder api_lab (your project)
+
+#2 Register middleware in settings in Django folder
+'api_lab.middleware.simple_middleware',
+
+#3 Define your middleware code, this case I use this following code.
+This middleware is aimed to save every request received by application before it is processed.
+credit : https://docs.djangoproject.com/en/1.11/topics/http/middleware/
+
+from .core import Logging as log_api
+def simple_middleware(get_response):
+    # One-time configuration and initialization.
+
+    def middleware(request):
+        # Code to be executed for each request before
+        # the view (and later middleware) are called.
+
+        # get current path url
+        current_path = request.get_full_path()
+
+        # save log from middleware
+        log_middleware = [current_path, method, message]
+
+        response = get_response(request)
+
+        # Code to be executed for each request/response after
+        # the view is called.
+
+        return response
+
+    return middleware
+
