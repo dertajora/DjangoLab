@@ -1,0 +1,89 @@
+This is Django installation steps from scratch
+
+#1 Create environment coding
+python -m venv labderta
+
+#2 Activate environment
+labderta\Scripts\activate
+
+#3 Install Django
+pip install django
+
+#4 Create first project
+django-admin.py startproject django_lab .
+
+#6 Install djangorestframework
+pip install djangorestframework
+
+#5 Install pymysql
+pip install pymysql
+
+#6 Reuse Dependensi Library
+pip install -r /path/to/requirements.txt
+Sebenarnya kita bisa simpan dependensi yang ktia install di requirement.txt, jadi nanti pas install tinggal based on file tersebut.
+
+#7 Insert config in __init__.py
+import pymysql
+pymysql.install_as_MySQLdb()
+
+#8 check if installation done properly
+python manage.py runserver
+
+#9 create db django_testing
+create manual database di Database yang di connect in
+
+#10 Create table bawaan django
+python manage.py migrate
+
+#11 Test your django installation.
+Open http://127.0.0.1:8000/ in browser
+
+#12 Create super user to access admin panel
+python manage.py createsuperuser. Then insert your credential details as requested in command prompt
+
+
+Next Phase -- Create Your First API and Print Hello World!!
+#1 Create app
+python manage.py startapp api_lab (api_lab -> name of applications)
+
+#2 Adjust configuration file
+- open  settings.py
+- In INSTALLED_APPS --> add your name of application 'api_lab' and 'rest_framework'. 'rest_framework' is used for rest framework libary
+
+#3 Create urls.py in folder /api_lab
+
+#4 Open django_api/urls.py, add this following code to include route from our app (api_lab)
+
+from django.conf.urls import url, include
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^', include('api.urls')),
+]
+
+#5 Open views.py then paste it
+from django.shortcuts import render
+from django.http import HttpResponse
+
+
+#6 Add this following code in api_lab/views.py .
+
+def home(request):
+    return HttpResponse ('Hello World!!')
+
+#7 In api_lab/urls.py paste this following code
+
+from django.conf.urls import url, include
+from django.contrib import admin
+from . import views
+
+urlpatterns = [
+    url(r'^home/$', views.home),
+
+]
+
+#9 Try to open http://127.0.0.1:8000/home/ in your browser
+
+#10 NB
+views works like controller in PHP MVC framework
