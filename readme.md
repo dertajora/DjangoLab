@@ -7,4 +7,5 @@ This project is developed for the research sake. My current company (Garena) wan
 - First Django Rest API
 - Modularization
 - Logging
-- Add Request Middleware
+- Middleware for Request Handling
+- Migrations
