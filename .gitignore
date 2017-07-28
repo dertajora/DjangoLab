@@ -10,3 +10,6 @@ bin
 lib
 /labderta
 /api_lab/__pycache__
+api_lab/migrations/__pycache__
+api_lab/__pycache__
+

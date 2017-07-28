@@ -90,6 +90,7 @@ urlpatterns = [
 #10 Note
 views works like controller in PHP MVC framework
 
+
 C. Create Middleware
 
 #1 Add file middleware.py at folder api_lab (your project)
@@ -123,4 +124,45 @@ def simple_middleware(get_response):
         return response
 
     return middleware
+
+D. How to use Migration
+
+Migration is really useful when you are working on team or use several different working environment. The main idea of migration is the next user of the code, only need to do migration when they want to
+install DB. No need again to import export DB manually and attach it our code.
+
+#1 Define your model file. This is will represent your table when you are call migrate command.
+
+class Product(models.Model):
+
+    product_id = models.IntegerField(primary_key=True)
+    product_name = models.TextField(max_length=200)
+    product_type = models.CharField(max_length=200)
+
+    def __str__(self):
+        return 'product_id : %s' %self.product_id
+
+#2 Run command makemigration to create migration file
+python manage.py makemigrations
+
+#3 After migration file generated. Please do migration
+python manage.py migrate
+
+#4 Check your DB. Your new table should already sit there
+
+#5 If you want to do adjustment or update your table, you could also do it with migrations. For the example you could add this following code
+
+class Product(models.Model):
+
+    product_id = models.IntegerField(primary_key=True)
+    product_name = models.TextField(max_length=200)
+    product_type = models.CharField(max_length=200)
+    #additional code
+    description = models.TextField(max_length=200, default='SOME STRING')
+    def __str__(self):
+        return 'product_id : %s' %self.product_id
+
+#6 After add code above. Run makemigrations and migrate again
+python manage.py makemigrations
+python manage.py migrate
+
 
