@@ -9,3 +9,4 @@ include
 bin
 lib
 /labderta
+/api_lab/__pycache__
