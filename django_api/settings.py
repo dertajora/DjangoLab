@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'api_lab.middleware.simple_middleware',
+    'api_lab.middleware.simple_middleware'
 ]
 
 ROOT_URLCONF = 'django_api.urls'
@@ -126,3 +126,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+TIME_ZONE = 'Asia/Jakarta'

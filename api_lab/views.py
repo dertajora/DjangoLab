@@ -12,6 +12,9 @@ from rest_framework.views import APIView
 #load my own python code from another directory
 from .core import Logging as log_api
 
+#load python library in same directory
+from . import Laboratorium as test
+
 def home(request):
     return HttpResponse ('Hello World!!')
 
@@ -21,8 +24,9 @@ def derta(request):
 
 @api_view(['POST','GET'])
 def product(request):
+    derta = test.test_nilai()
     resp = {'result_code': '0', 'resut_message': 'Success', 'product_data': 33,
-            'purchase_data': 11}
+            'purchase_data': 11, 'nilai' : derta}
     return Response(resp)
 
 @api_view(['GET'])
