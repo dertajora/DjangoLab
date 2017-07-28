@@ -125,6 +125,8 @@ def simple_middleware(get_response):
 
     return middleware
 
+#4 In this project we already implement before request and after request middleware. Please take a look at api_lab/middleware.py
+
 D. How to use Migration
 
 Migration is really useful when you are working on team or use several different working environment. The main idea of migration is the next user of the code, only need to do migration when they want to
