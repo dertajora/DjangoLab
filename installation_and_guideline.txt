@@ -180,3 +180,23 @@ example : from .. import Logging as log_yo
 #2 Import from same directory
 
 from . import Laboratorium as test
+
+F. Create Modularization
+
+#1 Create submodule folder in your package and views file.
+example : submodule
+example : submodule/views.py
+
+#2 Dont forge to import django rest framework to your views in submodule like you did in main views
+
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
+#3 Import your views from your submodule in "urls.py". Dont forget to add alias to make your life easier
+from .submodule import views as view_submodule
+
+#4 Call your submodule view in "urls.py" as you call your main views.
+
+url(r'^submodule/$', view_submodule.example_submodule),
+
+

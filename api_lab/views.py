@@ -11,6 +11,7 @@ from rest_framework.views import APIView
 
 #load my own python code from another directory
 from .core import Logging as log_api
+from .core import Learn_curl as curl
 
 #load python library in same directory
 from . import Laboratorium as test
@@ -33,3 +34,10 @@ def product(request):
 def traditional_logging(request):
     log_api.save_log()
     return Response("Write log success")
+
+@api_view(['GET'])
+def get_list_uber_product(request):
+    log_api.save_log()
+    data = curl.get_data_uber()
+    resp = {'result_code': '0', 'resut_message': 'Success', 'data': data}
+    return Response(resp)
