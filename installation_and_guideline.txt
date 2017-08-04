@@ -180,3 +180,52 @@ example : from .. import Logging as log_yo
 #2 Import from same directory
 
 from . import Laboratorium as test
+
+F. Create Modularization
+
+#1 Create submodule folder in your package and views file.
+example : submodule
+example : submodule/views.py
+
+#2 Dont forge to import django rest framework to your views in submodule like you did in main views
+
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
+#3 Import your views from your submodule in "urls.py". Dont forget to add alias to make your life easier
+from .submodule import views as view_submodule
+
+#4 Call your submodule view in "urls.py" as you call your main views.
+
+url(r'^submodule/$', view_submodule.example_submodule),
+
+G. Usage of model
+1. Make sure you already have model product. To access your model in admin page do this following step
+
+2. Set config in api_lab/admin.py
+Add this following code
+
+# detail display in admin for each model
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('product_id', 'product_name','product_type')
+    #list column would displayed in admin
+    exclude = ('description',)
+    #exclude is used for hide description value when editing data in admin
+
+# Register your models here.
+admin.site.register(Product, ProductAdmin)
+
+3. How to query from Model
+
+# 1st way, with filter, filter could be empty
+product = Product.objects.filter(product_id=1,).values()
+
+# 2nd way , get all data
+product = Product.objects.all().values()
+
+# how to use the object
+print(product.product_id)
+print(product.product_name)
+
+# set response
+resp = {'result_code': '0', 'result_message': 'Success', 'data': list(product)}

@@ -26,9 +26,10 @@ def simple_middleware(get_response):
         response = get_response(request)
 
         # handle logging middleware after request processed and response will be done
-        data_sent = str(response.data)
-        param_response = [current_path, method, data_sent]
-        log_api.save_log_middleware_after(param_response)
+
+        # data_sent = str(response.data)
+        # param_response = [current_path, method, data_sent]
+        # log_api.save_log_middleware_after(param_response)
 
 
         # Code to be executed for each request/response after

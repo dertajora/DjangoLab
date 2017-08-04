@@ -9,9 +9,10 @@ include
 bin
 lib
 /labderta
-/api_lab/__pycache__
+api_lab/__pycache__
 api_lab/migrations/__pycache__
 api_lab/__pycache__
 api_lab/log
 django_api/__pycache__/
+api_lab/core/__pycache__
 
