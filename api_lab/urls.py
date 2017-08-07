@@ -8,9 +8,9 @@ urlpatterns = [
     url(r'^api/$', views.derta),
     url(r'^product/$', views.product),
     url(r'^traditional_logging/$', views.traditional_logging),
-    url(r'^get_list_uber_product/$', views.get_list_uber_product),
     url(r'^submodule/$', view_submodule.example_method),
     url(r'^usage_model/$', views.use_model),
+    url(r'^learn_curl/$', views.learn_curl),
 
 
 ]

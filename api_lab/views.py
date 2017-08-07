@@ -11,7 +11,10 @@ from rest_framework.views import APIView
 
 #load my own python code from another directory
 from .core import Logging as log_api
-from .core import Learn_curl as curl
+from .core import Credential as cred
+
+#load API from third party
+from .api_external import Uber
 
 #load python library in same directory
 from . import Laboratorium as test
@@ -38,13 +41,6 @@ def traditional_logging(request):
     return Response("Write log success")
 
 @api_view(['GET'])
-def get_list_uber_product(request):
-    log_api.save_log()
-    data = curl.get_data_uber()
-    resp = {'result_code': '0', 'resut_message': 'Success', 'data': data}
-    return Response(resp)
-
-@api_view(['GET'])
 def use_model(request):
     # product = Product.objects.filter(product_id=1,).values()
     product = Product.objects.all().values()
@@ -52,4 +48,11 @@ def use_model(request):
     # print(product.product_id)
     # print(product.product_name)
     resp = {'result_code': '0', 'result_message': 'Success', 'data': list(product)}
+    return Response(resp)
+
+@api_view(['GET'])
+def learn_curl(request):
+    token = cred.token_server_uber_api()
+    data_product_uber = Uber.get_product_data(token)
+    resp = {'result_code': '0', 'result_message': 'Success', 'data': data_product_uber}
     return Response(resp)
