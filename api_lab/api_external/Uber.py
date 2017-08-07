@@ -19,10 +19,9 @@ def get_product_data(token):
     #  data product from my own API (this API data come from Uber API too)
     data_product = requests.get('https://katakamu.id/barclayseye-api/public/uber/list_product')
 
-    # requests.get('https://api.uber.com/v1.2/products?latitude=37.7752315&longitude=-122.418075', headers=headers)
-    # NB. Original query string below. It seems impossible to parse and
-    # reproduce query strings 100% accurately so the one below is given
-    # in case the reproduced version is not "correct".
-    # requests.get('https://api.uber.com/v1.2/products?latitude=37.7752315&longitude=-122.418075', headers=headers)
+    # return bisa menggunakan alternatif berikut
+    # http://docs.python-requests.org/en/master/
+    # data_product.text
+    # data_product.json
 
     return data_product
