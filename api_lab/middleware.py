@@ -10,6 +10,8 @@ def simple_middleware(get_response):
         # get current path url
         current_path = request.get_full_path()
 
+
+
         # get method of request
         method = request.method
 
@@ -19,17 +21,28 @@ def simple_middleware(get_response):
         # when we need all param
         data_received = str(request.POST.dict())
 
+
         # save log from middleware
-        param_request = [current_path, method, data_received]
+        if current_path.find("product") == -1:
+            type = "PAY"
+            message = "Payment Req"
+            message_resp = "Payment Resp"
+        else:
+            type = "INQ"
+            message= "Inquiry Req"
+            message_resp = "Inquiry Resp"
+
+        param_request = [current_path, method, data_received, type, message]
+
         log_api.save_log_middleware_before(param_request)
 
         response = get_response(request)
 
         # handle logging middleware after request processed and response will be done
 
-        # data_sent = str(response.data)
-        # param_response = [current_path, method, data_sent]
-        # log_api.save_log_middleware_after(param_response)
+        data_sent = str(response.data)
+        param_response = [current_path, method, data_sent, type, message_resp]
+        log_api.save_log_middleware_after(param_response)
 
 
         # Code to be executed for each request/response after

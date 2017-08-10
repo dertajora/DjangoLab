@@ -42,9 +42,9 @@ def traditional_logging(request):
 
 @api_view(['GET'])
 def use_model(request):
-    # product = Product.objects.filter(product_id=1,).values()
-    product = Product.objects.all().values()
-
+    product = Product.objects.filter(product_id=1,).values()
+    # product = Product.objects.all().values()
+    log_api.save_log_event("T2", "INQ", "IN", "Inquiry req ext", "SUB ID", "REF ID", product, request)
     # print(product.product_id)
     # print(product.product_name)
     resp = {'result_code': '0', 'result_message': 'Success', 'data': list(product)}
