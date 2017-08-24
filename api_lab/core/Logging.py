@@ -35,7 +35,7 @@ def save_log_middleware_before(array_param):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "a+") as f:
         datetime = strftime("%Y-%m-%d %H:%M:%S", localtime())
-        f.write("[" + datetime + "][INFO]["+array_param[3]+"][T1 IN "+ array_param[4] +" Apy][][]["+ array_param[0] + "]["+array_param[2]+"]\n")
+        f.write("[" + datetime + "][INFO MIDDLEWARE]["+array_param[3]+"][T1 IN "+ array_param[4] +" Apy][][]["+ array_param[0] + "]["+array_param[2]+"]\n")
 
 
 def save_log_middleware_after(array_param):
@@ -47,5 +47,5 @@ def save_log_middleware_after(array_param):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "a+") as f:
         datetime = strftime("%Y-%m-%d %H:%M:%S", localtime())
-        f.write("[" + datetime + "][INFO][" + array_param[3] + "][T6 OUT " + array_param[4] + " Apy][][][" + array_param[
+        f.write("[" + datetime + "][INFO MIDDLEWARE][" + array_param[3] + "][T6 OUT " + array_param[4] + " Apy][][][" + array_param[
             0] + "][" + array_param[2] + "]\n")

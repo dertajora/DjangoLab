@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^submodule/$', view_submodule.example_method),
     url(r'^usage_model/$', views.use_model),
     url(r'^learn_curl/$', views.learn_curl),
+    url(r'^logging_example/$', views.logging_example),
 
 
 ]

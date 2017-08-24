@@ -18,8 +18,11 @@ from .api_external import Uber
 
 #load python library in same directory
 from . import Laboratorium as test
+from . import logging_main as log_new
 
 from .models import Product
+
+import json
 
 def home(request):
     return HttpResponse ('Hello World!!')
@@ -48,6 +51,22 @@ def use_model(request):
     # print(product.product_id)
     # print(product.product_name)
     resp = {'result_code': '0', 'result_message': 'Success', 'data': list(product)}
+    return Response(resp)
+
+@api_view(['GET','POST'])
+def logging_example(request, format=None):
+
+    resp = {'result_code': '0', 'resut_message': 'Payment Success'}
+    # HANDMADE
+    log_param = ["INFO","T2","IN", "INQ Inquiry req ext (Subscriber ID) ", resp, request.get_full_path(), request.method]
+    log_new.save_log_event(log_param)
+
+    # BUILT IN FROM DJANGO
+    log_new.logger.warning("[%s] [%s]","T2 INQ Inquiry req ext (Subscriber ID)","Response Data :" + json.dumps(resp))
+    log_new.logger.error("[%s] [%s] [%s]","TESTING LOG" ,"T2 INQ Inquiry req ext (Subscriber ID)", "Response Data :" + json.dumps(resp))
+    log_new.logger.info("[%s] [%s]", "T2 INQ Inquiry req ext (Subscriber ID)", "Response Data :" + json.dumps(resp))
+
+    resp = {'result_code': '0', 'result_message': 'Success', 'data': "test"}
     return Response(resp)
 
 @api_view(['GET'])
